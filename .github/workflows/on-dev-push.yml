@@ -36,4 +36,6 @@ jobs:
         run: TZ="America/Montreal" node -e "console.log(Date(Date.now()).toString())"
 
       - name: print time withouth TZ
-        run: node -e "console.log(Date(Date.now()).toString())"
+        run: |
+          node -e "console.log(Date(Date.now()).toString())"
+          node -v
