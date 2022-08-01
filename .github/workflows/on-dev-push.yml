@@ -1,0 +1,24 @@
+name: Run tests on push
+
+on:
+  push:
+    branches: dev
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    name: Set up
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say hello
+        run: echo "Hello"
+      - name: list versions
+        run: |
+            node -v
+            npm -v
+      - name: clone repo into the vm
+        uses: actions/checkout@v3
+      
+
+
