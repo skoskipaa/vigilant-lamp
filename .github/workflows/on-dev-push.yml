@@ -17,7 +17,17 @@ jobs:
             node -v
             npm -v
       - name: clone repo into the vm
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+
+      - name: set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
       
-
-
+      - name: set up node 12
+        uses: actions/setup-node@v3
+        with:
+          node-version: 12
+      
+      - name: install deps
+        run: npm install
