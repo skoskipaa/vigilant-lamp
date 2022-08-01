@@ -35,5 +35,5 @@ jobs:
       - name: print time
         run: TZ="America/Montreal" node -e "console.log(Date(Date.now()).toString())"
 
-      - name: print time with TZ env
-        run: TZ="UTC" node -e "console.log(Date(Date.now()).toString())"
+      - name: print time withouth TZ
+        run: node -e "console.log(Date(Date.now()).toString())"
